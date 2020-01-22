@@ -45,26 +45,18 @@ new Vue({
 }
 
 
-}); 
-// button.addEventListener('click', function(){
-//     // alert("you have clicked already");
-//     console.log("you have clicked already");
+}),
+created() {
     
-//         let r = Math.floor(Math.random()*256) + 1;
-//         let g = Math.floor(Math.random()*256) + 1;
-//         let b = Math.floor(Math.random()*256) + 1;
-    
-//         attack.style.numbers = "rgb("+r+", "+g+", "+b+")";
-    
-//     })
-
-let randomNum = (min, max) =>{
+    randomNum(min, max){
     let n = [];
     for (let i =0; i<3; i++){
         n.push(math.floor(math.random()*max)+min);
     }
     return n;
-    
+    console.log(n)
+}
+
 }
 
 
