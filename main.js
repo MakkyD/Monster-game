@@ -19,7 +19,7 @@ new Vue({
 
     methods: {
        attackMonster() {
-         this.life = math.random();
+         this.life -= 10;
        },
     startGame(){
         this.startGame= true;
@@ -46,14 +46,25 @@ new Vue({
 
 
 }); 
-button.addEventListener('click', function(){
-    // alert("you have clicked already");
-    console.log("you have clicked already");
+// button.addEventListener('click', function(){
+//     // alert("you have clicked already");
+//     console.log("you have clicked already");
     
-        let r = Math.floor(Math.random()*256) + 1;
-        let g = Math.floor(Math.random()*256) + 1;
-        let b = Math.floor(Math.random()*256) + 1;
+//         let r = Math.floor(Math.random()*256) + 1;
+//         let g = Math.floor(Math.random()*256) + 1;
+//         let b = Math.floor(Math.random()*256) + 1;
     
-        attack.style.numbers = "rgb("+r+", "+g+", "+b+")";
+//         attack.style.numbers = "rgb("+r+", "+g+", "+b+")";
     
-    })
+//     })
+
+let randomNum = (min, max) =>{
+    let n = [];
+    for (let i =0; i<3; i++){
+        n.push(math.floor(math.random()*max)+min);
+    }
+    return n;
+    
+}
+
+
